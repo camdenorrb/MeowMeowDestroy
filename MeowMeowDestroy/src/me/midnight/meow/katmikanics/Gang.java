@@ -12,7 +12,7 @@ public class Gang {
     private final Set<Kat> kats = new HashSet<>();
     private final String name;
 
-    private long totalFishes = 0;
+    private long totalFish = 0;
     private long totalMilk = 0;
 
     public Gang(String name) {
@@ -27,8 +27,8 @@ public class Gang {
         return totalMilk;
     }
 
-    public long getTotalFishes() {
-        return totalFishes;
+    public long getTotalFish() {
+        return totalFish;
     }
 
     public Set<Kat> getKats() {
@@ -39,8 +39,8 @@ public class Gang {
         this.totalMilk = totalMilk;
     }
 
-    public void setTotalFishes(long totalFishes) {
-        this.totalFishes = totalFishes;
+    public void setTotalFish(long totalFish) {
+        this.totalFish = totalFish;
     }
 
     public void claw(Kat kat) {
@@ -50,7 +50,7 @@ public class Gang {
     public void destroyPlanet(Planet planet) {
         if (!planet.isAlive()) { System.out.println("Pwanet is already destwoyd :C"); return; }
         totalMilk += planet.getAvailableMilk();
-        totalFishes += planet.getFishPopulation();
+        totalFish += planet.getFishPopulation();
         planet.setAlive(false);
         System.out.println(planet.getName() + " HAS BEEN DESTWOYD KILLED " + planet.getPopulation() + " MORTALS  Stole: " + planet.getFishPopulation() + " Fish  Stole: " + planet.getAvailableMilk() + " Gallons of Milk");
     }
@@ -64,7 +64,7 @@ public class Gang {
 
     public void add(Kat kat) {
         if (kat.getFish() < 1000 || kat.getGallonsOfMilk() < 100000) { System.out.println(kat.getName() + " Was rejected from " + name + " Gang!"); return; }
-        totalFishes += kat.getFish();
+        totalFish += kat.getFish();
         totalMilk += kat.getGallonsOfMilk();
         kats.add(kat);
     }

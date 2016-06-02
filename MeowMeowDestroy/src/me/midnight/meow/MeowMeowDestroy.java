@@ -18,7 +18,7 @@ public class MeowMeowDestroy {
         katGang.add(kingKat);
         katGang.destroyPlanet(eath);
         katGang.destroyPlanet(planetDogs);
-        System.out.println(katGang.getTotalFishes());
+        System.out.println(katGang.getTotalFish());
         katGang.remove(kingKat);
         System.out.println(kingKat.getFish());
     }
